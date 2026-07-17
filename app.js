@@ -39,7 +39,30 @@ class Company
         return this.checkTicketID() + "\n" 
                 + this.createURL();
     }
+
+    // support for complaint system by company
+    support()
+    {
+        if(isNaN(this.#ticketID))
+        {
+            return "Ticket not Created";
+        }
+
+        else 
+        {
+        return "Ticket Created Successfully" + "\n" + 
+                "Generated URL " + this.createURL() + "\n" +
+                "Support Team View " + "\n" + 
+                "Customer: " + this.#name + "\n" + 
+                "Issue: " + this.#issue + "\n" +
+                "Ticket ID: " + this.#ticketID;
+        }
+    }
 }
 
 let customer1 = new Company("Rahul Sharma", "r.sharma.rs215@gmail.com", "Login not Working", 101);
+let customer2 = new Company("Umesh Singh", "umeshsingh33@hotmail.com", "Payment Failed", "ABC124");
 console.log(customer1.complaint);
+console.log(customer2.complaint);
+console.log(customer1.support());
+console.log(customer2.support());
