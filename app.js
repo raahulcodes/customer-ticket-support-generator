@@ -1,11 +1,11 @@
 
-// creating a class compoany which has private fields name, email, ticketID, issue
+// creating a class company
 class Company
 {
-    #name;
-    #email;
-    #issue;
-    #ticketID;
+    #name;                                 //private field for name                                   
+    #email;                                //private field for email
+    #issue;                                //private field for issue
+    #ticketID;                             //private field for ticketID
     constructor(name, email, issue, ticketID)
     {
         this.#name = name;
